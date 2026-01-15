@@ -23,6 +23,11 @@ if not OPENAI_API_KEY:
     print("   Please add your OpenAI API key to the .env file")
     OPENAI_API_KEY = None
 
+@app.route("/")
+def home():
+    return "MSME Loan Suggestor Backend is Live 🚀"
+
+    
 client = OpenAI(api_key=OPENAI_API_KEY) if OPENAI_API_KEY else None
 
 # MSME Scheme Rules
