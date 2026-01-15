@@ -32,7 +32,8 @@ function App() {
         setResults(null);
 
         try {
-            const response = await fetch('http://localhost:5000/api/check-eligibility', {
+            // Use production backend on Render
+            const response = await fetch('https://msme-loan-suggestor.onrender.com/api/check-eligibility', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
